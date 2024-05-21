@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>VtM - Dice Roller</title>
+</head>
+
+<body>
+    <img src="img/vamp_title.png" id="title" class="center">
+
+    <div id="contentBox">
+
+        <div id="diceBox">
+            <div id="normalDiceBox"></div>
+            <div id="hungerDiceBox"></div>
+        </div>
+
+        <form id="diceOptions">
+            <label for="diceOpt">Dice</label>
+            <input type="number" oninput="noDice(this.value, 1)" min=0 id="diceOpt" name="diceOpt" value=0>
+            <label for="hungerOpt">Hunger</label>
+            <input type="number" oninput="noDice(this.value, 0)" min=0 id="hungerOpt" name="hungerOpt" value=0>
+            <label for="diffOpt">Difficulty</label>
+            <input type="number" min=0 id="diffOpt" name="diffOpt" value=0>
+        </form>
+
+        <button onclick="rollDice()" id="rollBtn" >Roll</button>
+        <button onclick="rouseCheck()" id="rouseCheck" title="Roll one die without hunger">Rouse Check</button>
+
+        
+
+        <div id="attrList">
+            <div id="innerAttrList">
+                <h3>Attributes</h3>
+                <div>
+                    <ul id="attributeUl">
+                    </ul>
+                </div>
+        
+                <h3>Skills</h3>
+                <div>
+                    <ul id="skillUl">
+                    </ul>
+                </div>
+                <hr>
+            </div>
+
+            <div id="selection">
+        
+                <label for="select_attribute">Choose Rolling Attributes:</label>
+                <select id="select_attribute">
+                    <option value="none">Attribute (None)</option>
+                </select>
+                <select id = "select_skill">
+                    <option value="none">Skill (None)</option>
+
+                </select>
+                <label style="margin-left:30px">Additional Dice</label>
+                <input type="number" value="0" min="0">
+                <button onclick="roll_with_attributes">Roll with Attributes</button>
+            </div>
+        </div>
+
+        <!-- <div id="attributeProfile">
+            <label for="Load">Load</label>
+            <input type="text" id="loadPF" name="Load">
+            <label for="Save">Save</label>
+            <input type="text" id="savePF" name="Save">
+            <label for="Upload">Upload</label>
+            <input type="text" id="uploadPF" name="Upload">
+    
+        </div> -->
+
+        
+
+        
+        
+        <br>
+        <br>
+        <footer>
+            <sub><a href="https://vtm.paradoxwikis.com/Basic_Mechanics">VtM Dice mechanic explained:</a></sub>
+            <sub>A d10 dice is rolled. 6 or above is a success, with a 10 being a critical success, worth two. A 1 on a hunger die gives a bestial failure.</sub>
+            <br>
+            <sub>Number of dice can't exceed 100. Y'know, for sanity reasons. ...Please don't try breaking this</sub>
+        </footer>
+    </div>
+    
+    </body>
+
+    <script src="index.js"></script>
+</html>

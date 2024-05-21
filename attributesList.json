@@ -1,0 +1,201 @@
+{
+    "attributes" : {
+        "Strength" : {
+            "points" : 0,
+            "tooltip" : "Exertion of force by the muscles (Physical)"
+        },
+        "Charisma" : {
+            "points" : 0,
+            "tooltip" : "Charm, magnetism, strength of personality (Social)"
+        },
+        "Intelligence" : {
+            "points" : 0,
+            "tooltip" : "Memory, reasoning, intellect (Mental)"
+        },
+        "Dexterity" : {
+            "points" : 0,
+            "tooltip" : "Agility, grace, eye-hand coordination (Physical)"
+        },
+        "Manipulation" : {
+            "points" : 0,
+            "tooltip" : "Getting others to do what you want (Social)"
+        },
+        "Wits" : {
+            "points" : 0,
+            "tooltip" : "Cleverness, intuition, spur-of-the-moment decision-making (Mental)"
+        },
+        "Stamina" : {
+            "points" : 0,
+            "tooltip" : "Toughness, resilience, endurance (Physical)"
+        },
+        "Composure" : {
+            "points" : 0,
+            "tooltip" : "Self-control, cool, calm head (Social) "
+        },
+        "Resolve" : {
+            "points" : 0,
+            "tooltip" : "Focus, concentration, attention (Mental)"
+        }
+    },
+
+    "skills" : {
+        "Academics" : {
+            "points" : 0,
+            "tooltip" : " Humanities and liberal arts, book- learning (Mental)"
+        },
+        
+
+        "Animal ken" : {
+            "points" : 0,
+            "tooltip" : " Animal handling and communication (Social)"
+        },
+        
+
+        "Athletics" : {
+            "points" : 0,
+            "tooltip" : " Running, jumping, climbing (Physical) "
+        },
+        
+
+        "Awareness" : {
+            "points" : 0,
+            "tooltip" : " Senses, being aware of your sur- roundings, spotting threats (Mental) "
+        },
+        
+
+        "Brawl" : {
+            "points" : 0,
+            "tooltip" : " Unarmed combat of all types (Physical) "
+        },
+        
+
+        "Craft" : {
+            "points" : 0,
+            "tooltip" : " Crafting, building, shaping (Physical) "
+        },
+        
+
+        "Drive" : {
+            "points" : 0,
+            "tooltip" : " Operating vehicles (Physical)"
+        },
+        
+
+        "Etiquette" : {
+            "points" : 0,
+            "tooltip" : " Politeness in social settings (Social) "
+        },
+        
+
+        "Finance" : {
+            "points" : 0,
+            "tooltip" : " Handling, moving, and making money (Mental)"
+        },
+        
+
+        "Firearms" : {
+            "points" : 0,
+            "tooltip" : " Using ranged weapons, such as guns and bows (Physical)"
+        },
+        
+
+        "Insight" : {
+            "points" : 0,
+            "tooltip" : " Determining states of mind and motives (Social)"
+        },
+        
+
+        "Intimidation" : {
+            "points" : 0,
+            "tooltip" : " Getting another person to back down (Social)"
+        },
+        
+
+        "Investigation" : {
+            "points" : 0,
+            "tooltip" : " Following clues, solving mysteries (Mental)"
+        },
+        
+
+        "Larceny" : {
+            "points" : 0,
+            "tooltip" : " Breaking and entering, guarding against that (Physical)"
+        },
+        
+
+        "Leadership" : {
+            "points" : 0,
+            "tooltip" : " Directing and inspiring others (So- cial)"
+        },
+        
+
+        "Medicine" : {
+            "points" : 0,
+            "tooltip" : " Healing injuries, diagnosing disease (Mental)"
+        },
+        
+
+        "Melee" : {
+            "points" : 0,
+            "tooltip" : " Armed hand-to-hand combat (Physical) OCCULT"
+        },
+        "Occult" : {
+            "points" : 0,
+            "tooltip" : ""
+        },
+        
+
+        "Persuasion" : {
+            "points" : 0,
+            "tooltip" : " Convincing others (Social)"
+        },
+        "Performance" : {
+            "points" : 0,
+            "tooltip" : ""
+        },
+        
+
+        "Politics" : {
+            "points" : 0,
+            "tooltip" : " Handling, moving, and making govern- ment (Mental)"
+        },
+        
+
+        "Science" : {
+            "points" : 0,
+            "tooltip" : " Knowledge and theory of the physical world (Mental)"
+        },
+        
+
+        "Stealth" : {
+            "points" : 0,
+            "tooltip" : " Not being seen, heard, or recognized (Physical)"
+        },
+        
+
+        "Streetwise" : {
+            "points" : 0,
+            "tooltip" : " Understanding the ins and outs of criminal and urban society (Social)"
+        },
+        
+
+        "Subterfuge" : {
+            "points" : 0,
+            "tooltip" : " Tricking others into doing your will (Social)"
+        },
+        
+
+        "Survival" : {
+            "points" : 0,
+            "tooltip" : " Remaining alive in adverse surroundings (Physical)"
+        },
+        
+
+        "Technology" : {
+            "points" : 0,
+            "tooltip" : " Understanding and using modern technology, computers, and online activity (Mental)"
+        }
+        
+
+    }
+}

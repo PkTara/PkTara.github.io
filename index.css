@@ -1,0 +1,100 @@
+body {
+    background-image: url("img/ghouls-flying.jpg");
+    background-color: bisque;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+h3 {
+    margin: 10px;
+    text-align: center;
+}
+
+#contentBox {
+    background-color: white;
+    min-height: 60vh;
+    position: relative;
+
+    border: 3px solid darkblue;
+    border-radius:10px;
+ 
+    padding: 30px;
+}
+
+#title {
+    height: 20vh;
+}
+
+#diceBox {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid darkblue;
+    border-radius:10px;
+}
+
+#hungerDiceBox, #normalDiceBox {
+    
+    height: 5em;
+    min-width: 40%;
+    margin: auto
+}
+#hungerDiceBox {}
+#normalDiceBox {}
+
+#diceOptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    
+}
+#diceOpt, #hungerOpt, #diffOpt {
+    max-width: 3em;
+    margin: auto
+}
+
+
+#rollBtn {
+    width: 100%;
+    margin-top: 5px;
+}
+#rouseCheck {
+    width: 100%
+}
+
+#attrList {
+    border: 2px solid darkblue;
+    margin: 10px
+}
+#attributeUl, #skillUl{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.atrPoints {
+    float:inline-start;
+    margin: 0;
+}
+.attribute-div {
+    flex-basis: 33%;
+}
+.attribute-div > li {
+}
+#selection {
+    padding: 10px;
+    
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+    height:fit-content;
+}
