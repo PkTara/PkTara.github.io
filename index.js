@@ -1,6 +1,5 @@
 var dice = [0,0] // 0 is hunger, 1 is normal
 var atrPoints = []
-document.getElementById("selection").reset(); 
 
 function randi(max) {
     return Math.floor(Math.random() * max);
