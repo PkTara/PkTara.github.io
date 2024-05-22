@@ -13,25 +13,58 @@
     <div id="contentBox">
 
         <div id="diceBox">
-            <div id="normalDiceBox"></div>
-            <div id="hungerDiceBox"></div>
+            <div id="result-box">
+                <div id="result">
+                    <h4>Successes: </h4>
+                </div>
+    
+                <div class="bottom">
+                    
+                    <div class="diffOpt">
+                        <label for="diffOpt">Difficulty</label>
+                        <input type="number" min=0 id="diffOpt" name="diffOpt" value=0>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div id="boxes">
+                <div id="normalDiceBox"></div>
+                <div id="hungerDiceBox"></div>
+            </div>
+            <button onclick="willpower()" id="willpower">Willpower</button>
         </div>
 
-        <form id="diceOptions">
-            <label for="diceOpt">Dice</label>
-            <input type="number" oninput="noDice(this.value, 1)" min=0 id="diceOpt" name="diceOpt" value=0>
-            <label for="hungerOpt">Hunger</label>
-            <input type="number" oninput="noDice(this.value, 0)" min=0 id="hungerOpt" name="hungerOpt" value=0>
-            <label for="diffOpt">Difficulty</label>
-            <input type="number" min=0 id="diffOpt" name="diffOpt" value=0>
+        <form id="selection">
+        
+            <label for="select_attribute">Choose Rolling Attributes:</label>
+            <select id="select_attribute">
+                <option value="none" onclick="noDice()">Attribute (None)</option>
+            </select>
+            <select id = "select_skill">
+                <option value="none" onclick="noDice()">Skill (None)</option>
+            </select>
+            <label style="margin-left:30px">Additional Dice</label>
+            <input id="addDice" onclick="noDice()" type="number" value="0" min="0">
+            <label >Hunger</label>
+            <input id="hunger" onclick="noDice()" type="number" value="0" min="0">
+            <input type="reset">
+            
         </form>
 
+        
+
+        
+
         <button onclick="rollDice()" id="rollBtn" >Roll</button>
+    
         <button onclick="rouseCheck()" id="rouseCheck" title="Roll one die without hunger">Rouse Check</button>
 
         
 
         <div id="attrList">
+
             <div id="innerAttrList">
                 <h3>Attributes</h3>
                 <div>
@@ -44,23 +77,10 @@
                     <ul id="skillUl">
                     </ul>
                 </div>
-                <hr>
+    
             </div>
 
-            <div id="selection">
-        
-                <label for="select_attribute">Choose Rolling Attributes:</label>
-                <select id="select_attribute">
-                    <option value="none">Attribute (None)</option>
-                </select>
-                <select id = "select_skill">
-                    <option value="none">Skill (None)</option>
-
-                </select>
-                <label style="margin-left:30px">Additional Dice</label>
-                <input id="addDice" type="number" value="0" min="0">
-                <button onclick="roll_with_attributes()">Roll with Attributes</button>
-            </div>
+            
         </div>
 
         <!-- <div id="attributeProfile">

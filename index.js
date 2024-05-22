@@ -1,17 +1,30 @@
 var dice = [0,0] // 0 is hunger, 1 is normal
 var atrPoints = []
-document.getElementById("diceOptions").reset(); 
+document.getElementById("selection").reset(); 
 
 function randi(max) {
     return Math.floor(Math.random() * max);
   }
 
-function noDice(number, index) { // index - 0 is hunger, 1 is normal
-    dice[index] = number
-    var normDice = (dice[1] - dice[0] > 0) ? (dice[1] - dice[0]) : 0;
-    var hungerDice = Math.min(dice[0], dice[1])
+function calcDiceType() {
+    var totalDice = getTotalDice_fromAttributes()
+    var hunger = parseInt(document.getElementById("hunger").value)
 
+    var normDice = (totalDice - hunger > 0) ? (totalDice - hunger) : 0; // normal dice is leftover dice after hunger dice taken, but this can't go below zero
+    var hungerDice = Math.min(hunger, totalDice) // if hunger is 3 but totalDice is 2, can only show 2 hunger dice
+ 
     normDice = Math.min(normDice, 100) // limits no. dice to 100
+ 
+    return([normDice, hungerDice])
+}
+
+function noDice() { // index - 0 is hunger, 1 is normal
+    
+   // dice[index] = number
+  //  var normDice = (dice[1] - dice[0] > 0) ? (dice[1] - dice[0]) : 0;
+   // var hungerDice = Math.min(dice[0], dice[1])
+
+    var [normDice, hungerDice] = calcDiceType() 
 
     clearDiceBox()
 
@@ -31,12 +44,8 @@ function clearDiceBox() {
 function printDice(normalDice, hungerDice) {
     clearDiceBox()
 
-    x = numberToRoll(normalDice, 0)
-    normalDice = x[0]
-    var successes = x[1]
-    x = numberToRoll(hungerDice, 1)
-    hungerDice = x[0];
-    successes += x[1];
+    var [normalDice, normalSuccesses] = numberToRoll(normalDice, 0)
+    var [hungerDice, hungerSuccesses] = numberToRoll(hungerDice, 1)
 
     for (let type of [[normalDice, 1], [hungerDice, 0]]) {
         for (let img of type[0]) {
@@ -45,11 +54,36 @@ function printDice(normalDice, hungerDice) {
             }
         }
 
+    printSuccesses(normalSuccesses, hungerSuccesses)
+}
 
+function printSuccesses(normalSuccesses, hungerSuccesses) { // success, crit, bestial
+    var totalSuccesses = normalSuccesses[0] + hungerSuccesses[0] + normalSuccesses[1] + hungerSuccesses[1]
+    var totalPairs = (Math.floor((normalSuccesses[1] + hungerSuccesses[1]) / 2)) * 2
+    totalSuccesses += (Math.floor((normalSuccesses[1] + hungerSuccesses[1]) / 2)) * 2
+   
+    var difficulty = parseInt(document.getElementById("diffOpt").value )
+    console.log(difficulty)
+
+    var addToHTML = ``
+    addToHTML += 
+    `<h4>Successes: ${totalSuccesses}</h4>`
+    if (hungerSuccesses[2]) {
+        addToHTML += " <p> Possible bestial failure</p>"
+    }
+    if (totalPairs && hungerSuccesses[1]) {
+        addToHTML += "<p>Possible Messy Critical</p>"
+    }
+
+
+    document.getElementById("result").innerHTML = addToHTML
+}
+
+function willpower() {
+    document.getElementById()
 }
 function rollDice () {
-    var no_normal = (dice[1] - dice[0] > 0) ? (dice[1] - dice[0]) : 0;
-    var no_hunger = Math.min(dice[0], dice[1])
+    var [no_normal, no_hunger] = calcDiceType()
 
 
     var normalDice = []
@@ -91,7 +125,8 @@ function numberToRoll(diceList, isHunger) {
 
 function rouseCheck() {
     clearDiceBox()
-   // dice=[1,0]
+   
+    document.getElementById("diffOpt").value = 1
     printDice([randi(10) + 1], [])
 }
 
@@ -133,7 +168,7 @@ fetch('./attributesList.json')
         }
     });
 
-function roll_with_attributes() {
+function getTotalDice_fromAttributes() {
     const attribute = document.getElementById("select_attribute").value
     const skill = document.getElementById("select_skill").value
     var totalDice = parseInt(document.getElementById("addDice").value)
@@ -147,14 +182,12 @@ function roll_with_attributes() {
         totalDice += [...collection2].filter(x => x.checked).length
     }
 
-    document.getElementById("diceOpt").value = totalDice
-    dice[1] = totalDice
-    rollDice()
+    return(totalDice)
 }
 
-function unhideAttributes() {
 
-}
+
+
 function fiveChecked(attribute,  index, value) {
     const collection = document.getElementsByClassName(attribute); 
     var shouldUncheckFirst = collection[1].checked // if second item is also false
@@ -177,4 +210,5 @@ function fiveChecked(attribute,  index, value) {
         }
     }
     atrPoints.push([attribute, no_checked])
+    
 }

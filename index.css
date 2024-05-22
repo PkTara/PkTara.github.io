@@ -6,7 +6,7 @@ body {
 }
 
 .center {
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -23,8 +23,8 @@ h3 {
     position: relative;
 
     border: 3px solid darkblue;
-    border-radius:10px;
- 
+    border-radius: 10px;
+
     padding: 30px;
 }
 
@@ -36,60 +36,92 @@ h3 {
     display: flex;
     flex-direction: row;
     border: 3px solid darkblue;
-    border-radius:10px;
+    border-radius: 10px;
+    min-height: 6em;
+}
+#boxes {
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    margin: auto;
 }
 
-#hungerDiceBox, #normalDiceBox {
-    
-    height: 5em;
-    min-width: 40%;
-    margin: auto
-}
-#hungerDiceBox {}
-#normalDiceBox {}
+
 
 #diceOptions {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 10px;
-    
+
 }
-#diceOpt, #hungerOpt, #diffOpt {
+
+#diceOpt,
+#hungerOpt,
+#diffOpt {
     max-width: 3em;
     margin: auto
 }
 
+#result-box {
+    width:20%;
+    padding: 10px;
+    position: relative;
+}
+
+#result > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bottom {
+    position: absolute;
+    display: inline;
+    bottom: 0
+}
+
+
+#result>h4 {
+    margin: 0;
+}
 
 #rollBtn {
     width: 100%;
     margin-top: 5px;
 }
+
 #rouseCheck {
-    width: 100%
+    width: 99%
 }
 
 #attrList {
     border: 2px solid darkblue;
     margin: 10px
 }
-#attributeUl, #skillUl{
+
+#attributeUl,
+#skillUl {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
 }
+
 .atrPoints {
-    float:inline-start;
+    float: inline-start;
     margin: 0;
 }
+
 .attribute-div {
     flex-basis: 33%;
 }
-.attribute-div > li {
-}
+
+.attribute-div>li {}
+
 #selection {
     padding: 10px;
-    
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 footer {
