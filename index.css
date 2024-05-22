@@ -30,6 +30,7 @@ h3 {
 
 #title {
     height: 20vh;
+    width: auto;
 }
 
 #diceBox {
@@ -56,8 +57,6 @@ h3 {
 
 }
 
-#diceOpt,
-#hungerOpt,
 #diffOpt {
     max-width: 3em;
     margin: auto
@@ -91,7 +90,7 @@ h3 {
 }
 
 #rouseCheck {
-    width: 99%
+    width: 100%
 }
 
 #attrList {
@@ -109,6 +108,7 @@ h3 {
 .atrPoints {
     float: inline-start;
     margin: 0;
+    float:left
 }
 
 .attribute-div {

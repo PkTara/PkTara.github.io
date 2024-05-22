@@ -146,7 +146,7 @@ fetch('./attributesList.json')
                 }
 
                 addtoHTML += 
-                `<li 
+                `<li class="attrText"
                 title="${attribute[1].tooltip}">
                 ${attribute[0]}</li>
                 </div> 
