@@ -15,7 +15,6 @@ function noDice(number, index) { // index - 0 is hunger, 1 is normal
 
     clearDiceBox()
 
-    console.log(normDice, hungerDice)
     for (let type of [[normDice, 1], [hungerDice, 0]]) {
         for (let i=0; i < type[0]; i++) {
             document.getElementById(['hungerDiceBox','normalDiceBox'][type[1]])
@@ -39,9 +38,7 @@ function printDice(normalDice, hungerDice) {
     hungerDice = x[0];
     successes += x[1];
 
-    console.log(normalDice, hungerDice)
     for (let type of [[normalDice, 1], [hungerDice, 0]]) {
-        console.log(type[0])
         for (let img of type[0]) {
             document.getElementById(['hungerDiceBox','normalDiceBox'][type[1]])
             .innerHTML += `<img src='${img}'>`
@@ -137,14 +134,28 @@ fetch('./attributesList.json')
     });
 
 function roll_with_attributes() {
+    const attribute = document.getElementById("select_attribute").value
+    const skill = document.getElementById("select_skill").value
+    var totalDice = parseInt(document.getElementById("addDice").value)
+    
+    if (attribute != "none"){
+        var collection = document.getElementsByClassName(attribute)
+        totalDice += [...collection].filter(x => x.checked).length
+    }
+    if (skill != "none") {
+        var collection2 = document.getElementsByClassName(skill)
+        totalDice += [...collection2].filter(x => x.checked).length
+    }
 
+    document.getElementById("diceOpt").value = totalDice
+    dice[1] = totalDice
+    rollDice()
 }
 
 function unhideAttributes() {
 
 }
 function fiveChecked(attribute,  index, value) {
-    console.log(attribute, index, value)
     const collection = document.getElementsByClassName(attribute); 
     var shouldUncheckFirst = collection[1].checked // if second item is also false
     index += 1 // so loop repeats correct number of times
@@ -155,7 +166,6 @@ function fiveChecked(attribute,  index, value) {
     for (let i=0; i < index; i++) {  // checks all boxes before clicked
         collection[i].checked = true
     }
-    console.log(collection[1].checked)
     if (index == 1 && !shouldUncheckFirst) { // allows unchecking of first box
         collection[0].checked = value
     }

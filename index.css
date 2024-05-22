@@ -93,8 +93,5 @@ h3 {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     padding: 1em;
-    height:fit-content;
 }
