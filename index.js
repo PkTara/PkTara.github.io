@@ -31,8 +31,7 @@ function printPotentialDice(clear=true) {
 
 function clearDiceBox(clearHunger=true, clearNormal=true) {
     for (let [index, box] of ["hungerDiceBox" , "normalDiceBox"].entries()) {
-        if ([clearHunger, clearNormal][index]) {console.log(box);document.getElementById(box).innerHTML = ""}
-        console.log(clearHunger)
+        if ([clearHunger, clearNormal][index]) {document.getElementById(box).innerHTML = ""}
     }
 
 }
@@ -53,7 +52,6 @@ function printDice(normalDice, hungerDice, clear=true) {
 }
 
 function printResultText(normalSuccesses, hungerSuccesses) { // [success, crit, bestial]
-    console.log(normalSuccesses["crit"])
     var totalSuccesses = normalSuccesses["success"] + hungerSuccesses["success"] + normalSuccesses["crit"] + hungerSuccesses["crit"]
     var totalPairs = (Math.floor((normalSuccesses["crit"] + hungerSuccesses["crit"]) / 2)) * 2
     totalSuccesses += (Math.floor((normalSuccesses["crit"] + hungerSuccesses["crit"]) / 2)) * 2
@@ -147,7 +145,7 @@ function selectDie(button) {
     }
 function willpowerReroll() {
     var selected = document.getElementsByClassName("will-selected")
-    rollDice(selected.length)
+    if (selected.length) {rollDice(selected.length)}
     while(selected.length > 0){
         selected[0].parentNode.removeChild(selected[0]);
         }
@@ -155,7 +153,6 @@ function willpowerReroll() {
 
     var addToHTML = ""
     var willDice = Object.values(document.getElementsByClassName("will"))
-    console.log(willDice)
     if (willDice.length) { // If there are any will dice left,
         for (var ankh of willDice) {
             addToHTML += `<img class="normalIMG" src=${ankh.children[0].src}>`
