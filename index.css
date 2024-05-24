@@ -124,6 +124,16 @@ h3 {
 
 }
 
+.will {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+.will-selected { 
+    background-color: darkred;
+}
+
 footer {
     padding: 1em;
 }

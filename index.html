@@ -39,16 +39,16 @@
         <form id="selection">
         
             <label for="select_attribute">Choose Rolling Attributes:</label>
-            <select id="select_attribute">
-                <option value="none" onclick="noDice()">Attribute (None)</option>
+            <select id="select_attribute" oninput="printPotentialDice()">
+                <option value="none" >Attribute (None)</option>
             </select>
-            <select id = "select_skill">
-                <option value="none" onclick="noDice()">Skill (None)</option>
+            <select id = "select_skill" oninput="printPotentialDice()">
+                <option value="none">Skill (None)</option>
             </select>
             <label style="margin-left:30px">Additional Dice</label>
-            <input id="addDice" onclick="noDice()" type="number" value="0" min="0">
+            <input id="addDice" oninput="printPotentialDice()" type="number" value="0" min="0">
             <label >Hunger</label>
-            <input id="hunger" onclick="noDice()" type="number" value="0" min="0">
+            <input id="hunger" oninput="printPotentialDice()" type="number" value="0" min="0">
             <input type="reset">
             
         </form>
