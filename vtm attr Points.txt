@@ -1,0 +1,54 @@
+Strength:
+1 - You can easily crush a beer can. (20 kg: a Christmas tree,a stop sign)
+2 - You are physically average. (45kg: a toilet)
+3 - You might be able to break open a wooden door. (115 kg: a large human, an empty coffin, a refrigerator)
+4 - You are a prime physical specimen, likely with very visible musculature. (180 kg: a full coffin, an empty dumpster)
+5 - You are a true powerhouse and can likely break open a metal fire door, tear open a chain-link fence, or snap open a chained gate. (250 kg: a motorcycle, a pi ano)
+Dexterity:
+1 - You can run, but balance and dodging are a challenge.
+2 - Your sprint is solid, and sometimes you appear graceful.
+3 - Your agility is impressive, and your coordination is as good as any trained amateur.
+4 - You could excel at acrobatics and move in a way few humans can.
+5 - Your movements are liquid and hypnotic — almost superhuman.
+Stamina:
+1 - Even lesser exertions make you winded.
+2 - You can take a beating, but consider suing for peace
+3 - Several days of hard hiking with a backpack is no problem for you.
+4 -  You could win a marathon or take copious amounts of pain, at least physically.
+5 -  Even if you were a mortal, you'd never break a sweat.
+Charisma: 
+1 - You can speak clearly, though few people tend to listen.
+2 - Generally likeable despite your undead nature, you may even have friends.
+3 - People trust you implicitly, and you easily make friends.
+4 - You possess significant personal magnetism and draw followers like flies.
+5 - You could lead a city in rebellion, if you so choose.
+Manipulation:
+1 - As long as you stay honest, you can convince people to do what you want.
+2 - Your ability to deceive surpasses the will of the weak-willed and simple-minded.
+3 - You never have to pay full price for anything.
+4 - You could be a cult leader — or a politician.
+5 - You could convince the Prince to invest in desert property, or maybe even to call off the Blood Hunt on your head.
+Composure:
+1 - The slightest insult or confrontation could drive you to frenzy.
+2 - You can subdue your predatory instincts in most non-hostile situations.
+3 - Others look to you for guidance when the blood spatter hits the fan.
+4 - You can effortlessly bluff at cards and can manage your Beast to some extent.
+5 - The Beast is your pet.
+Intelligence:
+1 - You can read and write competently, though some terms confound you.
+2 - You are smart enough to realize your limitations.
+3 - You are enlightened, able to piece together clues without difficulty.
+4 - You're likely consulted by members of Clan Tremere for your wisdom.
+5 - Genius does not cover the depths and range of your intellect.
+Wits:
+1 - You get the point eventually, but it takes some explaining.
+2 - You can bet the odds in poker or apply the emergency brakes in time. usually.
+3 - You can analyze a situation and quickly work out the best escape route.
+4 - You are never caught on the back foot and always come up with a smart riposte.
+5 - You think and respond more quickly than most people can comprehend.
+Resolve: 
+1 - You have minimal attention for all but the most pressing things
+2 - You can settle in for the long haul, as long as it’s not too long. 
+3 - Distracting you takes more effort than most other people want to spend. 
+4 - You can brute-force your way to a deduction past any obstacles 
+5 - You can think in a gunfight or watch the door in a blood orgy and then clean up every shell casing or spilled droplet.
